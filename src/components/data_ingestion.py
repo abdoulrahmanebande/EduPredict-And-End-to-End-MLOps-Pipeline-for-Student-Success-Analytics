@@ -6,6 +6,10 @@ from dataclasses import dataclass
 from src.logger import logging 
 from src.exception import CustomException
 
+# Testing of data transformation
+from src.components.data_transformation import DataTransformationConfig
+from src.components.data_transformation import DataTransformation
+
 @dataclass
 class DataIngestionConfif:
   train_data_path: str=os.path.join("artifacts", "train.csv")
@@ -45,4 +49,7 @@ class DataIngestion:
 # For testing purpose only   
 if __name__ == "__main__":
   obj = DataIngestion()
-  obj.initiate_data_ingestion()
+  train_path, test_path = obj.initiate_data_ingestion()
+  
+  data_transformation_obj = DataTransformation()
+  data_transformation_obj.initiate_data_transformation(train_path, test_path)
