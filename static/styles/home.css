@@ -1,0 +1,100 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0; /* Remove default margins to allow header/footer to touch edges */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Makes body full height of screen */
+}
+
+/* Add padding to the header and main instead of body margins */
+.nav-bar {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px; 
+}
+
+.hero {
+  flex: 1; /* Pushes the footer to the bottom */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content horizontally */
+  text-align: center;   /* Centers the text inside the paragraphs */
+}
+
+.hero section {
+  max-width: 800px; /* Keeps text readable on wide screens */
+}
+
+footer {
+  height: 120px;
+  color: white;
+  background-color: #26C271;
+  width: 100%; /* Ensures it fills left to right */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+.project-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.project-name-capital-letter {
+  color: #26C271;
+}
+
+.hero section {
+  max-width: 600px; /* Limits how wide the text can go */
+  margin: 0 auto;   /* Centers the text block itself */
+  text-align: center; 
+}
+
+/* Container for buttons to add spacing */
+.header-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  /* Using your green color */
+  background-color: #26C271;
+  color: white;
+  
+  /* Typography */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  
+  /* Sizing and Shape */
+  padding: 10px 24px;
+  border: none;
+  border-radius: 50px; /* Makes them perfectly rounded */
+  cursor: pointer;
+  
+  /* Smooth Transition */
+  transition: all 0.3s ease;
+  
+  /* Subtle Shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+button:hover {
+  background-color: #1ea35d; /* A slightly darker green for depth */
+  transform: translateY(-2px); /* Makes button "lift" up */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Active (Click) Effect */
+button:active {
+  transform: translateY(0); /* Returns to normal when clicked */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

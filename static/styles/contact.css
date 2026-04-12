@@ -1,0 +1,120 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* Navbar Consistency */
+.nav-bar {
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.project-name-capital-letter {
+  color: #26C271;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.nav-btn {
+  background: none;
+  border: 1px solid #26C271;
+  color: #26C271;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #26C271;
+  color: white;
+}
+
+/* Contact Card */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+.profile-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  border-top: 5px solid #26C271; /* Accent top border */
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.title {
+  color: #26C271;
+  font-weight: 600;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+.contact-info {
+  margin: 30px 0;
+  text-align: left;
+}
+
+.info-item {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item strong {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.info-item a, .info-item span {
+  font-size: 1.1rem;
+  color: #333;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+/* Social Buttons */
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-btn {
+  padding: 10px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  background: #333;
+  color: white;
+}
+
+.social-btn.linkedin {
+  background: #0077b5;
+}
+
+.social-btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}

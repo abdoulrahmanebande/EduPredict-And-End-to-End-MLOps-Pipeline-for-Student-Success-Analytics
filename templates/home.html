@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/icons/logo.png') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+
+  <title>Home</title>
+
+</head>
+<body>
+  <header class="nav-bar">
+    <p class="project-name">
+      <span class="project-name-capital-letter">E</span>du<span class="project-name-capital-letter">P</span>redict
+    </p>
+    <div class="header-buttons">
+      <a href="{{ url_for('predict') }}">
+        <button>Predict</button>
+      </a>
+      <a href="{{ url_for('contact') }}" style="text-decoration: none;">
+        <button>Contact Me</button>
+      </a>
+    </div>
+  </header>
+
+  <main class="hero">
+    <section>
+      <h1>Welcome to EduPredict</h1>
+      <p>
+        An End-to-End MLOps Pipeline for Student Success Analytics.
+        EduPredict understands how the Student's performance is affected 
+        by variables like gender, race ethnicity, parental level of education,
+        writing score and others...
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 EduPredict
+  </footer>
+</body>
+</html>

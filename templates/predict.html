@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/icons/logo.png') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/predict.css') }}">
+
+  <title>Predict</title>
+
+</head>
+<body>
+  <header class="nav-bar">
+    <p class="project-name">
+      <span class="project-name-capital-letter">E</span>du<span class="project-name-capital-letter">P</span>redict
+    </p>
+    <div class="header-buttons">
+      <a href="{{ url_for('home') }}">
+        <button>Home</button>
+      </a>
+      <a href="{{ url_for('contact') }}" style="text-decoration: none;">
+        <button>Contact Me</button>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="form-card">
+      <h2>Student Performance Indicator</h2>
+      
+      <form action="/predict" method="post" class="grid-form">
+        <div class="field-group full-width">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+
+        <div class="field-group full-width">
+          <label for="ethnicity">Race or Ethnicity</label>
+          <select id="ethnicity" name="race_ethnicity" required>
+            <option value="" disabled selected>Select Group</option>
+            <option value="group A">Group A</option>
+            <option value="group B">Group B</option>
+            <option value="group C">Group C</option>
+            <option value="group D">Group D</option>
+            <option value="group E">Group E</option>
+          </select>
+        </div>
+
+        <div class="field-group full-width">
+          <label for="education">Parental Level of Education</label>
+          <select id="education" name="parental_level_of_education" required>
+            <option value="" disabled selected>Select Degree</option>
+            <option value="bachelor's degree">Bachelor's Degree</option>
+            <option value="some college">Some College</option>
+            <option value="master's degree">Master's Degree</option>
+            <option value="associate's degree">Associate's Degree</option>
+            <option value="high school">High School</option>
+            <option value="some high school">Some High School</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="lunch">Lunch Type</label>
+          <select id="lunch" name="lunch" required>
+            <option value="standard">Standard</option>
+            <option value="free/reduced">Free/Reduced</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="test_prep">Test Prep Course</label>
+          <select id="test_prep" name="test_preparation_course" required>
+            <option value="none">None</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="reading">Reading Score (0-100)</label>
+          <input type="number" id="reading" name="reading_score" min="0" max="100" placeholder="0" required>
+        </div>
+
+        <div class="field-group">
+          <label for="writing">Writing Score (0-100)</label>
+          <input type="number" id="writing" name="writing_score" min="0" max="100" placeholder="0" required>
+        </div>
+
+        <button type="submit" class="predict-btn full-width">Predict Score</button>
+      </form>
+
+      <div class="result-area">
+        <h3>The student's math score is: <span id="output"> {{ result }}</span></h3>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

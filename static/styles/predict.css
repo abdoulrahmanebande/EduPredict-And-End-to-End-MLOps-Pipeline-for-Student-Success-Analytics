@@ -1,0 +1,188 @@
+/* Navigation Bar */
+.nav-bar {
+  height: 60px;
+  background-color: #ffffff; /* Clean white background */
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  
+  height: 60px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+
+  /* --- Add these lines --- */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures the header stays on top of the form elements */
+  width: 100%;
+  box-sizing: border-box; /* Keeps padding from pushing the width past 100% */
+}
+
+.project-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.project-name-capital-letter {
+  color: #26C271; /* Your signature green */
+  font-size: 1.5rem;
+}
+
+/* Container for buttons to add spacing */
+.header-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  /* Using your green color */
+  background-color: #26C271;
+  color: white;
+  
+  /* Typography */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  
+  /* Sizing and Shape */
+  padding: 10px 24px;
+  border: none;
+  border-radius: 50px; /* Makes them perfectly rounded */
+  cursor: pointer;
+  
+  /* Smooth Transition */
+  transition: all 0.3s ease;
+  
+  /* Subtle Shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+button:hover {
+  background-color: #1ea35d; /* A slightly darker green for depth */
+  transform: translateY(-2px); /* Makes button "lift" up */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Active (Click) Effect */
+button:active {
+  transform: translateY(0); /* Returns to normal when clicked */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout Containers */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f4f7f6;
+  min-height: calc(100vh - 60px); /* Adjusts for navbar height */
+}
+
+.form-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 650px;
+}
+
+h2 {
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+/* Grid System */
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px;
+}
+
+.full-width {
+  grid-column: span 2; /* Spans across both columns */
+}
+
+/* Form Elements */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+}
+
+select, input {
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Focus States */
+select:focus, input:focus {
+  outline: none;
+  border-color: #26C271; /* Your green */
+  box-shadow: 0 0 8px rgba(38, 194, 113, 0.2);
+  background-color: #fff;
+}
+
+/* Prediction Button */
+.predict-btn {
+  margin-top: 10px;
+  background-color: #26C271;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.predict-btn:hover {
+  background-color: #1ea35d;
+  transform: translateY(-2px);
+}
+
+/* Result Styling */
+.result-area {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+#output {
+  color: #26C271;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 500px) {
+  .grid-form {
+    grid-template-columns: 1fr; /* Stack everything on small screens */
+  }
+  .full-width {
+    grid-column: span 1;
+  }
+}

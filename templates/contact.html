@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/icons/logo.png') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/contact.css') }}">
+  <title>Contact | Abdoul-Rahmane BANDE</title>
+</head>
+<body>
+  <header class="nav-bar">
+    <div class="project-name">
+        <span class="project-name-capital-letter">E</span>du<span class="project-name-capital-letter">P</span>redict
+    </div>
+    <div class="header-buttons">
+      <a href="{{ url_for('home') }}"><button class="nav-btn">Home</button></a>
+      <a href="{{ url_for('predict') }}"><button class="nav-btn">Predict</button></a>
+    </div>
+  </header>
+
+  <main class="contact-container">
+    <div class="profile-card">
+      <div class="profile-header">
+        <h1>Abdoul-Rahmane BANDE</h1>
+        <p class="title">Senior Data Scientist</p>
+      </div>
+
+      <div class="contact-info">
+        <div class="info-item">
+          <strong>Email:</strong>
+          <a href="mailto:abdoulrahmanebande@gmail.com">abdoulrahmanebande@gmail.com</a>
+        </div>
+        
+        <div class="info-item">
+          <strong>Specialization:</strong>
+          <span>MLOps, AIOps & Computer Science</span>
+        </div>
+
+        <div class="info-item">
+          <strong>Location:</strong>
+          <span>Remote / Global</span>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.github.com/abdoulrahmanebande" class="social-btn github">GitHub</a>
+        <a href="https://www.linkedin.com/in/bandeabdoulrahmane" class="social-btn linkedin">LinkedIn</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
