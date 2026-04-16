@@ -7,8 +7,8 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/your-username/your-repo-name">
-    <img src="https://raw.githubusercontent.com/your-username/your-repo-name/main/docs/banner.png" alt="Logo" width="100%" height="auto">
+  <a href="https://github.com/abdoulrahmanebande/EduPredict-And-End-to-End-MLOps-Pipeline-for-Student-Success-Analytics">
+    <img src="https://raw.githubusercontent.com/abdoulrahmanebande/EduPredict-And-End-to-End-MLOps-Pipeline-for-Student-Success-Analytics/main/docs/banner.png" alt="Logo" width="100%" height="auto">
   </a>
 
   <h3 align="center">End-to-End MLOps Pipeline</h3>
