@@ -39,3 +39,5 @@ def predict():
   
 if __name__ == "__main__":
   app.run(host="0.0.0.0", port=5000)
+  
+# Adding this line to test the Github workflow. The Runner should get trigerred.
