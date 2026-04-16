@@ -130,7 +130,7 @@ Distributed under the MIT License. See LICENSE for more information.
 
 <div align="center">
 <p>Developed with 🚀 by <b>BANDE Abdoul-Rahmane</b></p>
-<a href="https://www.google.com/search?q=https://linkedin.com/in/bandeabdoulrahmane">
+<a href="www.linkedin.com/in/bandeabdoulrahmane">
 <img src="https://commons.wikimedia.org/wiki/File:LinkedIn_logo_initials.png" alt="LinkedIn">
 </a>
 </div>
