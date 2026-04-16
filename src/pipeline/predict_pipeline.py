@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 from src.exception import CustomException
 from src.logger import logging 
@@ -14,8 +15,12 @@ class PredictPipeline:
   def predict(self, features):
     try:
       logging.info('Loding models!')
-      model = load_object('artifacts/model.pkl')
-      preprocessor = load_object('artifacts/preprocessor.pkl')
+      # Use forward slashes for Linux compatibility
+      model_path = os.path.join("artifacts", "model.pkl")
+      preprocessor_path = os.path.join("artifacts", "preprocessor.pkl")
+      
+      model = load_object(model_path)
+      preprocessor = load_object(preprocessor_path)
       
       logging.info('Transforming the features taken from the EduPredict website.')
       data_scaled = preprocessor.transform(features)
