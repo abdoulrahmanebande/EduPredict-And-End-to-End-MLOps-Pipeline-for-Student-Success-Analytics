@@ -80,7 +80,6 @@ This project provides a comprehensive solution for predicting student performanc
 │   ├── logger.py           # Logging configuration
 │   └── utils.py            # Common utility functions (e.g., save_object, evaluate_models)
 ├── templates/              # Flask HTML files
-├── static/              # Assets like icons, images, etc
 ├── app.py                  # Entry point
 ├── Dockerfile
 ├── requirements.txt
@@ -104,12 +103,12 @@ cd EduPredict-And-End-to-End-MLOps-Pipeline-for-Student-Success-Analytics
 
 **Build the Docker image:**
 ```bash
-docker build -t student-success-analytics .
+docker build -t student-performance .
 ``` 
 
 **Run the container:**
 ```bash
-docker run -p 5000:5000 student-success-analytics
+docker run -p 5000:5000 student-performance
 ``` 
 
 ## 💡 Usage
@@ -130,7 +129,7 @@ Distributed under the MIT License. See LICENSE for more information.
 
 <div align="center">
 <p>Developed with 🚀 by <b>BANDE Abdoul-Rahmane</b></p>
-<a href="www.linkedin.com/in/bandeabdoulrahmane">
+<a href="https://www.google.com/search?q=https://linkedin.com/in/bandeabdoulrahmane">
 <img src="https://commons.wikimedia.org/wiki/File:LinkedIn_logo_initials.png" alt="LinkedIn">
 </a>
 </div>
