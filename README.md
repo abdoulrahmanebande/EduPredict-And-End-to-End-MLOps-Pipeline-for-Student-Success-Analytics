@@ -62,41 +62,6 @@ This project provides a comprehensive solution for predicting student performanc
 - **Package Manager:** [uv](https://github.com/astral-sh/uv).
 - **DevOps:** Docker, GitHub Actions, AWS (EC2, ECR).
 
-## ⚙️ Installation & Setup
-
-### 1. Prerequisites
-Ensure you have **Docker** installed on your system. If you are on Windows, ensure **WSL2** or **Hyper-V** is enabled.
-
-### 2. Local Execution
-Follow these steps to run the application locally in a containerized environment:
-
-**Clone the repository:**
-```bash
-git clone (https://github.com/abdoulrahmanebande/EduPredict-And-End-to-End-MLOps-Pipeline-for-Student-Success-Analytics.git)
-cd EduPredict-And-End-to-End-MLOps-Pipeline-for-Student-Success-Analytics
-
-**Build the Docker image:**
-```bash
-docker build -t student-performance .
-
-**Run the container:**
-```bash
-docker run -p 5000:5000 student-performance
-
-## 💡 Usage
-
-Once the container is running:
-  1. Open your web browser.
-  2. Navigate to http://localhost:8080
-  3. Input the student data (Gender, Ethnicity, Scores, etc.) into the form. 
-  4. Click Predict to see the model's estimated result.
-
-
-## 📜 License 
-
-Distributed under the MIT License. See LICENSE for more information. 
-
-
 ## 📂 Project Structure
 
 ```text
@@ -120,6 +85,45 @@ Distributed under the MIT License. See LICENSE for more information.
 ├── requirements.txt
 ├── setup.py                # Building the project into a package
 └── README.md  
+``` 
+
+## ⚙️ Installation & Setup
+
+### 1. Prerequisites
+Ensure you have **Docker** installed on your system. If you are on Windows, ensure **WSL2** or **Hyper-V** is enabled.
+
+### 2. Local Execution
+Follow these steps to run the application locally in a containerized environment:
+
+**Clone the repository:**
+```bash
+git clone (https://github.com/abdoulrahmanebande/EduPredict-And-End-to-End-MLOps-Pipeline-for-Student-Success-Analytics.git)
+cd EduPredict-And-End-to-End-MLOps-Pipeline-for-Student-Success-Analytics
+```
+
+**Build the Docker image:**
+```bash
+docker build -t student-performance .
+``` 
+
+**Run the container:**
+```bash
+docker run -p 5000:5000 student-performance
+``` 
+
+## 💡 Usage
+
+Once the container is running:
+  1. Open your web browser.
+  2. Navigate to http://localhost:5000
+  3. Input the student data (Gender, Ethnicity, Scores, etc.) into the form. 
+  4. Click Predict to see the model's estimated result.
+
+
+## 📜 License 
+
+Distributed under the MIT License. See LICENSE for more information. 
+
 
 <br />
 
