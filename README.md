@@ -21,7 +21,7 @@
     <br />
     <a href="#preview">View Demo</a>
     ·
-    <a href="https://github.com/your-username/your-repo-name/issues">Report Bug</a>
+    <a href="https://github.com/abdoulrahmanebande/EduPredict-And-End-to-End-MLOps-Pipeline-for-Student-Success-Analytics/issues">Report Bug</a>
   </p>
 </div>
 
@@ -32,7 +32,7 @@
 Below is a demonstration of the application in action, showing the web interface and the prediction results.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/your-username/your-repo-name/main/docs/preview.gif" alt="Project Demo" width="80%">
+  <img src="https://raw.githubusercontent.com/abdoulrahmanebande/EduPredict-And-End-to-End-MLOps-Pipeline-for-Student-Success-Analytics/main/docs/preview.gif" alt="Project Demo" width="80%">
   <p><i>Live prediction workflow on AWS EC2</i></p>
 </div>
 
@@ -62,16 +62,70 @@ This project provides a comprehensive solution for predicting student performanc
 - **Package Manager:** [uv](https://github.com/astral-sh/uv).
 - **DevOps:** Docker, GitHub Actions, AWS (EC2, ECR).
 
+## ⚙️ Installation & Setup
+
+### 1. Prerequisites
+Ensure you have **Docker** installed on your system. If you are on Windows, ensure **WSL2** or **Hyper-V** is enabled.
+
+### 2. Local Execution
+Follow these steps to run the application locally in a containerized environment:
+
+**Clone the repository:**
+```bash
+git clone (https://github.com/abdoulrahmanebande/EduPredict-And-End-to-End-MLOps-Pipeline-for-Student-Success-Analytics.git)
+cd EduPredict-And-End-to-End-MLOps-Pipeline-for-Student-Success-Analytics
+
+**Build the Docker image:**
+```bash
+docker build -t student-performance .
+
+**Run the container:**
+```bash
+docker run -p 5000:5000 student-performance
+
+## 💡 Usage
+
+Once the container is running:
+  1. Open your web browser.
+  2. Navigate to http://localhost:8080
+  3. Input the student data (Gender, Ethnicity, Scores, etc.) into the form. 
+  4. Click Predict to see the model's estimated result.
+
+
+## 📜 License 
+
+Distributed under the MIT License. See LICENSE for more information. 
+
+
 ## 📂 Project Structure
 
 ```text
-├── .github/workflows      # CI/CD pipeline definitions
-├── artifacts              # Trained model and preprocessor (Serialized .pkl)
-├── src                    # Source code
-│   ├── components         # Data Ingestion, Transformation, Model Training
-│   ├── pipeline           # Train & Predict pipelines
-│   └── logger.py          # Custom logging
-├── templates              # HTML files for Flask
-├── Dockerfile             # Container configuration
-├── requirements.txt       # Project dependencies
-└── app.py                 # Flask application entry point
+├── .github/workflows/main.yaml    # CI/CD Pipeline
+├── artifacts/              # Model.pkl and Preprocessor.pkl
+├── docs/                   # Banner and Preview GIF
+├── src/
+│   ├── components/         # data_ingestion.py, data_transformation.py, model_trainer.py
+│   ├── notebooks/          # Research folder
+│   │   ├── data/
+│   │   │   └── stud.csv
+│   │   ├── eda for student performance indicator.ipynb
+│   │   └── model training.ipynb
+│   ├── pipeline/           # train_pipeline.py, predict_pipeline.py
+│   ├── exception.py        # Custom Exception handling
+│   ├── logger.py           # Logging configuration
+│   └── utils.py            # Common utility functions (e.g., save_object, evaluate_models)
+├── templates/              # Flask HTML files
+├── app.py                  # Entry point
+├── Dockerfile
+├── requirements.txt
+├── setup.py                # Building the project into a package
+└── README.md  
+
+<br />
+
+<div align="center">
+<p>Developed with 🚀 by <b>BANDE Abdoul-Rahmane</b></p>
+<a href="https://www.google.com/search?q=https://linkedin.com/in/bandeabdoulrahmane">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/LinkedIn-blue%3Fstyle%3Dfor-the-badge%26logo%3Dlinkedin" alt="LinkedIn">
+</a>
+</div>
